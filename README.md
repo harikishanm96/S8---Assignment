@@ -46,3 +46,25 @@ Forward Pass:
 The forward method defines how input data flows through the layers of the network.
 It applies convolutional, activation, normalization, dropout, and pooling layers sequentially to the input data, followed by the output layer.
 Finally, it applies a softmax function to the output to obtain class probabilities.
+
+## Normalization techniques
+
+Batch Normalization (BN): Batch normalization (nn.BatchNorm2d) normalizes the activations of each layer across the batch dimension.
+It computes the mean and variance of each feature map over the batch and applies a linear transformation to normalize the activations.
+Batch normalization helps to reduce internal covariate shift, making training more stable and allowing higher learning rates.
+It has been widely used in deep learning architectures and has shown to improve convergence and generalization.
+Example usage: nn.BatchNorm2d(n)
+
+Layer Normalization (LN): Layer normalization (nn.GroupNorm(1, n)) normalizes the activations of each layer across the channel dimension.
+It computes the mean and variance of each feature map across channels and applies normalization independently for each feature map.
+Layer normalization is less sensitive to the batch size and can be used effectively even with small batch sizes.
+It can improve training stability and performance, especially in recurrent neural networks (RNNs) and transformers.
+Example usage: nn.GroupNorm(1, n)
+
+Group Normalization (GN): Group normalization (nn.GroupNorm(num_groups, n)) divides the channels into groups and computes normalization statistics separately for each group.
+It aims to strike a balance between the computation of batch normalization and the robustness of layer normalization.
+Group normalization can be beneficial when the batch size is small or when the feature maps have irregular channel dimensions.
+It has been observed to perform well in scenarios where batch sizes are limited, such as transfer learning or fine-tuning tasks.
+Example usage: nn.GroupNorm(num_groups, n)
+
+
