@@ -16,9 +16,7 @@ Test	- 74.18
 
 ## Code
 
-Convolutional Layers:
-
-The network consists of several convolutional layers (nn.Conv2d). These layers perform the convolution operation, applying learnable filters to input images to extract features.
+Convolutional Layers: The network consists of several convolutional layers (nn.Conv2d). These layers perform the convolution operation, applying learnable filters to input images to extract features.
 Example: nn.Conv2d(3, 8, 3, padding=1, bias=False) creates a convolutional layer with 3 input channels, 8 output channels (number of filters), a kernel size of 3x3, and padding of 1 pixel.
 Activation Functions:
 
