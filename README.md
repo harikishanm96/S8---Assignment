@@ -62,4 +62,30 @@ Group normalization can be beneficial when the batch size is small or when the f
 It has been observed to perform well in scenarios where batch sizes are limited, such as transfer learning or fine-tuning tasks.
 Example usage: nn.GroupNorm(num_groups, n)
 
+## Graphs
+
+GN:
+![graph_gn](https://github.com/harikishanm96/S8---Assignment/assets/53985105/52778e7e-4480-400b-bc1c-166f5a408c4b)
+
+LN:
+![graph_ln](https://github.com/harikishanm96/S8---Assignment/assets/53985105/6f6d08bb-c8aa-4f1e-9ab3-43a8196dd7ed)
+
+BN:
+![graph_bn](https://github.com/harikishanm96/S8---Assignment/assets/53985105/57166959-b748-4526-b51f-92cb773b6efe)
+
+## Misclassified images 
+
+GN:
+![misclassified_images_gn](https://github.com/harikishanm96/S8---Assignment/assets/53985105/2e2070c9-08d3-4c8c-a1da-e090159ddd4e)
+
+LN:
+![misclassified_images_ln](https://github.com/harikishanm96/S8---Assignment/assets/53985105/dc898577-97ee-4616-aff2-d9b6b35e5726)
+
+BN:
+![misclassified_images_bn](https://github.com/harikishanm96/S8---Assignment/assets/53985105/f9ba665f-9c28-4b69-bafc-ab30f6475b4d)
+
+
+
+
+
 
